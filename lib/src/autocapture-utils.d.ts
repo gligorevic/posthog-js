@@ -1,0 +1,15 @@
+import { AutocaptureConfig } from 'types';
+export declare function getClassName(el: Element): string;
+export declare function getSafeText(el: Element): string;
+export declare function isElementNode(el: Element | undefined | null): el is HTMLElement;
+export declare function isTag(el: Element | undefined | null, tag: string): el is HTMLElement;
+export declare function isTextNode(el: Element | undefined | null): el is HTMLElement;
+export declare function isDocumentFragment(el: Element | ParentNode | undefined | null): el is DocumentFragment;
+export declare const autocaptureCompatibleElements: string[];
+export declare function shouldCaptureDomEvent(el: Element, event: Event, autocaptureConfig?: AutocaptureConfig | undefined): boolean;
+export declare function shouldCaptureElement(el: Element): boolean;
+export declare function isSensitiveElement(el: Element): boolean;
+export declare function shouldCaptureValue(value: string): boolean;
+export declare function isAngularStyleAttr(attributeName: string): boolean;
+export declare function getDirectAndNestedSpanText(target: Element): string;
+export declare function getNestedSpanText(target: Element): string;
