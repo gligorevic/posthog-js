@@ -497,7 +497,7 @@ export class PostHog {
         }
         // Set up event handler for pageleave
         // Use `onpagehide` if available, see https://calendar.perfplanet.com/2020/beaconing-in-practice/#beaconing-reliability-avoiding-abandons
-        window.addEventListener &&
+        typeof window !== undefined && window.addEventListener &&
             window.addEventListener('onpagehide' in self ? 'pagehide' : 'unload', this._handle_unload.bind(this))
 
         // Make sure that we also call the initComplete callback at the end of
